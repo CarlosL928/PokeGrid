@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+.pokemon-card-container {
+    
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 60px;
+    background-color: #EDE7E3;
+    border: 1px solid #FFA62B;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+    max-width: auto;
+    margin: auto;
+}
+
+.pokemon-card-container > div[title="Reproducir sonido"] {
+    cursor: pointer;
+    text-align: center;
+}
+
+.pokemon-card-container h1.name {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.pokemon-card-container h2.id,
+.pokemon-card-container h2.types {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #666;
+}
+
+.pokemon-card-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.pokemon-card-container ul li {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #FFA62B;
+}
+
+.pokemon-card-container img {
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.pokemon-card-container .sprite {
+    height: 150px;
+    width: 150px;
+}
+
+mat-spinner {
+    display: block;
+    margin: 50px auto;
+}
+
+.name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,13 @@
+<div class="pokemon-card-container">
+    <div *ngFor="let pokemon of pokemons()" class="pokemon-card" (click)="playSound(pokemon?.cries?.latest); openDialog(pokemon.id)">
+      <h1 class="name">{{ pokemon?.species?.name || 'Nombre no disponible' }}</h1>
+      <img class="sprite" [src]="pokemon?.sprites?.other?.dream_world?.front_default" [alt]="pokemon?.name || 'Imagen no disponible'">
+     
+    </div>
+  </div>
+
+  <div class="centered-container">
+  
+    <a class="load-more" (click)="loadPokemon()"></a> 
+    
+  </div>

@@ -1,0 +1,32 @@
+@if(pokemon){
+    <div class="pokemon-card-container">
+        <div (click)="playSound(pokemon?.cries?.latest)" style="cursor: pointer;" title="Reproducir sonido">
+            <h1 class="name">{{ pokemon?.species?.name || 'Nombre no disponible' }}</h1>
+
+
+
+            <div *ngIf="animationArray.length > 0">
+                <div *ngFor="let image of animationArray">
+                  <img [src]="image" alt="Imagen de animación" height="150" width="150">
+                </div>
+              </div>
+        
+              
+              <div *ngIf="animationArray.length <0">
+                <img class="sprite" [src]="pokemon?.sprites?.other?.dream_world?.front_default" [alt]="pokemon?.name || 'Imagen no disponible'">
+              </div>
+            
+            
+            <h2 class="id">N°{{ pokemon?.id }}</h2>
+            <h2 class="types">Estadísticas:</h2>
+            <ul>
+              <li *ngFor="let stat of pokemon?.stats?.slice(0, 3)">
+                {{ stat.stat.name }}: {{ stat.base_stat }}
+              </li>
+            </ul>
+          
+          </div>
+      </div>
+}@else {
+    <mat-spinner></mat-spinner>}
+

@@ -5,17 +5,13 @@
 
 
 
-            <div *ngIf="animationArray.length > 0">
-                <div *ngFor="let image of animationArray">
-                  <img [src]="image" alt="Imagen de animación" height="150" width="150">
-                </div>
-              </div>
-        
-              
-              <div *ngIf="animationArray.length <0">
-                <img class="sprite" [src]="pokemon?.sprites?.other?.dream_world?.front_default" [alt]="pokemon?.name || 'Imagen no disponible'">
-              </div>
             
+
+            <img class="sprite" [src]="pokemon?.sprites?.other?.dream_world?.front_default" [alt]="pokemon?.name || 'Imagen no disponible'">
+
+            
+        
+             
             
             <h2 class="id">N°{{ pokemon?.id }}</h2>
             <h2 class="types">Estadísticas:</h2>
